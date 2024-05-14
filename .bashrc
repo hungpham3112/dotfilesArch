@@ -23,3 +23,4 @@ case ":$PATH:" in
 esac
 
 # <<< juliaup initialize <<<
+. "$HOME/.cargo/env"
