@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+CURRENT="$(ibus engine 2>/dev/null || true)"
+
+if [ "$CURRENT" = "Unikey" ]; then
+    ibus engine xkb:us::eng
+    notify-send "IBus" "English" 2>/dev/null || true
+else
+    ibus engine Unikey
+    notify-send "IBus" "Vietnamese" 2>/dev/null || true
+fi
