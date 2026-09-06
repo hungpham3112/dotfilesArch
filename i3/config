@@ -69,6 +69,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+q kill
 
+# lock screen
+bindsym $mod+Escape exec --no-startup-id i3lock
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -104,6 +107,10 @@ bindsym $mod+Shift+Right move right
 
 # split in vertical orientation
 # bindsym $mod+v split v
+
+exec --no-startup-id xfsettingsd --replace
+
+bindsym $mod+p exec --no-startup-id xfce4-display-settings --minimal
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
