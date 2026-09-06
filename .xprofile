@@ -1,0 +1,15 @@
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export SDL_IM_MODULE=ibus
+
+dbus-update-activation-environment --systemd \
+  GTK_IM_MODULE \
+  QT_IM_MODULE \
+  XMODIFIERS \
+  SDL_IM_MODULE \
+  DISPLAY \
+  XAUTHORITY \
+  PATH
+
+ibus-daemon -drx

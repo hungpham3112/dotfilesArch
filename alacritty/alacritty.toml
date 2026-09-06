@@ -1,3 +1,4 @@
+[general]
 live_config_reload = true
 
 [cursor.style]
@@ -6,9 +7,9 @@ blinking = "Always"
 [env]
 TERM = "xterm-256color"
 
-[font]
-normal = { family = "Cousine Nerd Font", style = "Regular" }
-size = 10
+[font.normal]
+family = "Cousine Nerd Font Mono"
+style = "Regular"
 
 [[keyboard.bindings]]
 action = "CreateNewWindow"
@@ -26,7 +27,7 @@ mods = "Shift|Control"
 history = 10000
 multiplier = 3
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/bash"
 
 [window]

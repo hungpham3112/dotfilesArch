@@ -37,9 +37,6 @@ exec --no-startup-id dunst
 # Screenshot
 bindsym $mod+Shift+s exec --no-startup-id flameshot gui --clipboard
 
-# Vietnamese input method
-exec --no-startup-id ibus-daemon -drx
-
 # Ubuntu-like app search: Super+d
 bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
 

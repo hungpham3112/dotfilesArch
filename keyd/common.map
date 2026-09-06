@@ -1,0 +1,5 @@
+[main]
+capslock = escape
+escape = capslock
+tab = layer(control)
+leftcontrol = tab

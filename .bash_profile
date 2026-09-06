@@ -1,19 +1,8 @@
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-    exec startx
+export PATH="$HOME/.local/bin:$PATH"
+
+if [[ -d "$HOME/.bun/bin" ]]; then
+    export BUN_INSTALL="$HOME/.bun"
+    export PATH="$BUN_INSTALL/bin:$PATH"
 fi
 
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-case ":$PATH:" in
-    *:/home/sofia/.juliaup/bin:*)
-        ;;
-
-    *)
-        export PATH=/home/sofia/.juliaup/bin${PATH:+:${PATH}}
-        ;;
-esac
-
-# <<< juliaup initialize <<<
-. "$HOME/.cargo/env"
+[[ -f "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
